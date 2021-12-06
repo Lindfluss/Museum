@@ -25,10 +25,12 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="welcome__main">
-                    <h2>Weclome <br> to the Louvre</h2>
-                    <h4>From the castle to the museum</h4>
-                    <button type="submit"><p>Discover the Louvre</p></button>
+                <div class="welcome-container">
+                    <div class="welcome__main">
+                        <h2>Weclome <br> to the Louvre</h2>
+                        <h4>From the castle to the museum</h4>
+                        <button type="submit"><p>Discover the Louvre</p></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,18 +101,20 @@
             </div>
         </div>
 
-        <div class="video">
+        <div class="videoplayer">
             <div class="wrapper">
                 <div class="player">
-                    <img src="images/video_image.png" alt="">
+                    <video src="minecraft.mp4" class="video"></video>
+                    <button class="on_screnn_play"></button>
                     <div class="controls">
-                        <div class="controls__left"><img src="images/left.svg" alt=""></div>
-                        <div class="controls__pause"><img src="images/pause.svg" alt=""></div>
-                        <div class="controls__right"><img src="images/right.svg" alt=""></div>
-                        <input type="range" class="progress">
-                        <div class="controls__sound"><img src="images/sound.svg" alt=""></div>
-                        <div class="controls__sound-bar"><input type="range" class="sound-bar"></div>
-                        <div class="controls__screen"><img src="images/screen.svg" alt="" class="screen"></div>
+                        <button class="backward-step"></button>
+                        <button class="play" id="play-pause"></button>
+                        <button class="forward-step"></button>
+                        <input type="range" class="time-bar" min="0" max="100" step="0.1" value="0">
+                        <button class="mute" id="mute-muted"></button>
+                        <input type="range" class="sound-bar" id="sound-bar" min="0" max="1" step="0.01" value="0.5">
+                        <span class="timestamp" id="timestamp">00:00</span>
+                        <button class="full-screen" id="full-screen"></button>
                     </div>
                 </div>
                 <div>
@@ -131,9 +135,15 @@
                     <div class="tickets__choice">
                         <div class="tickets__list">
                             <h5>Ticket Type</h5>
-                            <p><input type="radio" name="ticket_type">Permanent exhibition</p>
-                            <p><input type="radio" name="ticket_type">Temporary exhibition</p>
-                            <p><input type="radio" name="ticket_type">Combined Admission</p>
+                            <div>
+                                <input type="radio" name="rb" id="rb1" checked> <label for="rb1">Permanent exhibition</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rb" id="rb2"> <label for="rb2">Temporary exhibition</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rb" id="rb3"> <label for="rb3">Combined Admission</label>
+                            </div>
                         </div>
                     </div>
                     <div class="amount">
@@ -190,15 +200,16 @@
                         </ul>
                     </div>
                     <div class="footer__icons">
-                        <img src="images/p.svg" alt="">
-                        <img src="images/twitter.svg" alt="">
-                        <img src="images/facebook.svg" alt="">
-                        <img src="images/inst.svg" alt="">
                         <img src="images/youtube.svg" alt="">
+                        <img src="images/inst.svg" alt="">
+                        <img src="images/facebook.svg" alt="">
+                        <img src="images/twitter.svg" alt="">
+                        <img src="images/p.svg" alt="">
                     </div>
                 </div>
             </div>
         </footer>
 
+        <script src="/scripts/script.js"></script>
     </body>
 </html>
